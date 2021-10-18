@@ -10,7 +10,8 @@ function outputbooklist(){
   
 } 
 function removefromlist(index){
-alert(index);
+  books.splice(index,1)
+  outputbooklist()
 }
 
 const addBooks = () =>{
@@ -20,6 +21,7 @@ const addBooks = () =>{
   if (title.trim() === "" || author.trim() === "" ){
     return
   }
+  
   const newBook = {
     title,
     author 
