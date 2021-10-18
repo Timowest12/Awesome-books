@@ -3,13 +3,15 @@ const addBtn = document.getElementById("add-new-book")
 const booksoutput = document.querySelector('#booksoutput')
 function outputbooklist(){
   booksoutput.innerHTML = "";
-  books.forEach((book) => {
+  books.forEach((book, index) => {
     
-    booksoutput.innerHTML += `<div><div>${book.title}</div><div>${book.author}</div></div`;
+    booksoutput.innerHTML += `<div><div>${book.title}</div><div>${book.author}</div><button onclick='removefromlist(${index})'>remove</button></div`;
   })
   
 } 
-
+function removefromlist(index){
+alert(index);
+}
 
 const addBooks = () =>{
   const title = document.getElementById("title").value
