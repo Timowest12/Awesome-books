@@ -29,28 +29,29 @@ input {
   padding: 5px;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
-button{
-    padding: 5px;
-    cursor: pointer;
-    background: black;
-    border: 1px solid black;
-    color: white;
+button {
+  padding: 5px;
+  cursor: pointer;
+  background: black;
+  border: 1px solid black;
+  color: white;
 }
 
-button:hover{
-    transition: all 0.5s ease;
-    background: white;
-    color: black;
+button:hover {
+  transition: all 0.5s ease;
+  background: white;
+  color: black;
 }
 
-.addedbook{
-    margin-bottom: 15px;
+.addedbook {
+  margin-bottom: 15px;
 }
 
-p{
-    margin: 5px 0 5px 0;
+p {
+  margin: 5px 0 5px 0;
 }
