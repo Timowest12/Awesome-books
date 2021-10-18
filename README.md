@@ -10,7 +10,7 @@ In this project, we built a simple website that allows users to add and remove b
 - HTML
 - CSS
 
-![Website demo](awesomeBooks.png)
+![Website demo](awesomeBooks.jpg)
 
 ## Authors
 
