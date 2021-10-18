@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 .addbooks {
   display: flex;
   flex-direction: column;
@@ -10,14 +10,17 @@
   flex-direction: column;
   align-items: center;
 }
-=======
+
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px;
 }
 .container{
     width: 200px;
+    padding: 20px;
+    background-color: gainsboro
 }
 
 .addbooks{
@@ -30,4 +33,18 @@
     align-items: flex-start;
     flex-direction: column;
 }
->>>>>>> 8f5aaf7b985a253d9b5f583b602304bb8c8af3b3
+
+
+input{
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.add{
+    padding: 5px;
+    cursor: pointer;
+    background: black;
+    border: 1px solid black;
+    color: white;
+}
+
