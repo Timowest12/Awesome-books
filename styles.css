@@ -1,0 +1,57 @@
+
+.addbooks {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.container {
+  width: 300px;
+  padding: 20px;
+  background-color: gainsboro;
+}
+
+.booksoutput {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid gray;
+  padding: 5px;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 5px;
+  cursor: pointer;
+  background: black;
+  border: 1px solid black;
+  color: white;
+}
+
+button:hover {
+  transition: all 0.5s ease;
+  background: white;
+  color: black;
+}
+
+.addedbook {
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 5px 0 5px 0;
+}
