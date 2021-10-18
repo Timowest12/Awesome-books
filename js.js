@@ -1,5 +1,15 @@
 let books = [];
 const addBtn = document.getElementById("add-new-book")
+const booksoutput = document.querySelector('#booksoutput')
+function outputbooklist(){
+  booksoutput.innerHTML = "";
+  books.forEach((book) => {
+    
+    booksoutput.innerHTML += `<div><div>${book.title}</div><div>${book.author}</div></div`;
+  })
+  
+} 
+
 
 const addBooks = () =>{
   const title = document.getElementById("title").value
@@ -14,8 +24,9 @@ const addBooks = () =>{
   }
   books.push(newBook)
   console.log(newBook)
+  outputbooklist()
 }
 
 
-window.addEventListener("click", addBooks)
+addBtn.addEventListener("click", addBooks)
 console.log(books)
