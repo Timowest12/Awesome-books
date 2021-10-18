@@ -16,7 +16,7 @@ https://timowest12.github.io/Awesome-books/
 
 ## Website Demo
 
-![Website demo](Demo.jpg)
+![Website demo](demo.jpg)
 
 ## Authors
 
