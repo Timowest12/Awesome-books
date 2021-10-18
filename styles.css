@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .addbooks {
   display: flex;
   flex-direction: column;
@@ -9,3 +10,24 @@
   flex-direction: column;
   align-items: center;
 }
+=======
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: 200px;
+}
+
+.addbooks{
+    display: flex;
+    flex-direction: column;
+}
+
+.booksoutput{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+>>>>>>> 8f5aaf7b985a253d9b5f583b602304bb8c8af3b3
