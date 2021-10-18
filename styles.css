@@ -2,7 +2,7 @@
 .addbooks {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 300px;
 }
 
 .main {
@@ -18,14 +18,9 @@
     margin: 20px;
 }
 .container{
-    width: 200px;
+    width: 300px;
     padding: 20px;
     background-color: gainsboro
-}
-
-.addbooks{
-    display: flex;
-    flex-direction: column;
 }
 
 .booksoutput{
@@ -40,7 +35,7 @@ input{
     padding: 5px;
 }
 
-.add{
+button{
     padding: 5px;
     cursor: pointer;
     background: black;
@@ -48,3 +43,12 @@ input{
     color: white;
 }
 
+button:hover{
+    transition: all 0.5s ease;
+    background: white;
+    color: black;
+}
+
+.addedbook{
+    margin-bottom: 15px;
+}
