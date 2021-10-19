@@ -1,21 +1,39 @@
-const books = [];
 const addBtn = document.getElementById('add-new-book');
+const bttnn = document.getElementById('addbuttom');
 const booksoutput = document.querySelector('#booksoutput');
 
 function outputbooklist() {
-  const booklist = JSON.parse(localStorage.getItem('books'));
+  const booklistoutp = JSON.parse(localStorage.getItem('books'));
   booksoutput.innerHTML = '';
-  booklist.forEach((book, index) => {
+  booklistoutp.forEach((book, index) => {
     booksoutput.innerHTML += `<div class = "addedbook"><p>${book.title}</p><p>${book.author}</p><button onclick='removefromlist(${index})'>Remove</button></div`;
   });
 }
 
-function removefromlist(index) {
-  const booklist = JSON.parse(localStorage.getItem('books'));
-  booklist.splice(index, 1);
-  books.splice(index, 1);
-  localStorage.setItem('books', JSON.stringify(booklist));
-  outputbooklist();
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
+  addtolist() {
+    let booklist = [];
+    if (localStorage.getItem('books') === null) {
+      booklist = [];
+    } else {
+      booklist = JSON.parse(localStorage.getItem('books'));
+    }
+    booklist.push(this);
+    localStorage.setItem('books', JSON.stringify(booklist));
+    outputbooklist();
+  }
+
+  removefromlist(index) {
+    const bookss = JSON.parse(localStorage.getItem('books'));
+    bookss.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(bookss));
+    outputbooklist(this);
+  }
 }
 
 const addBooks = () => {
@@ -26,15 +44,15 @@ const addBooks = () => {
     return;
   }
 
-  const newBook = {
-    title,
-    author,
-  };
-
-  books.push(newBook);
-  localStorage.setItem('books', JSON.stringify(books));
+  const newBook = new Book(title, author).addtolist();
+  bttnn.addEventListener('click', newBook);
   outputbooklist();
 };
+function removefromlist(index) {
+  const newBook = new Book().removefromlist(index);
+  bttnn.addEventListener('click', newBook);
+}
 
 addBtn.addEventListener('click', addBooks);
-removefromlist(0);
+
+removefromlist(100);
