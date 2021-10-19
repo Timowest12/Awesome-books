@@ -1,14 +1,36 @@
+//localStorage.setItem('books', '[]');
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+  addtolist() { 
+    //outputbooklist();
+    if (localStorage.getItem("books") === null) {
+      var booklist = [];
+      //alert('yoo')
+    }else{
+     // alert('too')
+      booklist = JSON.parse(localStorage.getItem('books'));
+    }
+    booklist.push(this)
+    //alert(booklist)
+    localStorage.setItem('books', JSON.stringify(booklist));
+    outputbooklist();
+    
+   }
+}
 const books = [];
 const addBtn = document.getElementById('add-new-book');
 const booksoutput = document.querySelector('#booksoutput');
 
-function outputbooklist() {
-  const booklist = JSON.parse(localStorage.getItem('books'));
+/* function outputbooklist() {
+  booklistoutp = JSON.parse(localStorage.getItem('books'));
   booksoutput.innerHTML = '';
-  booklist.forEach((book, index) => {
+  booklistoutp.forEach((book, index) => {
     booksoutput.innerHTML += `<div class = "addedbook"><p>${book.title}</p><p>${book.author}</p><button onclick='removefromlist(${index})'>Remove</button></div`;
   });
-}
+} */
 
 function removefromlist(index) {
   const booklist = JSON.parse(localStorage.getItem('books'));
@@ -26,10 +48,7 @@ const addBooks = () => {
     return;
   }
 
-  const newBook = {
-    title,
-    author,
-  };
+  let newBook = new Book(title,author).addtolist();
 
   books.push(newBook);
   localStorage.setItem('books', JSON.stringify(books));
