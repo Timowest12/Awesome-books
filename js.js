@@ -1,26 +1,26 @@
-//localStorage.setItem('books', '[]');
 class Book {
   constructor(title, author) {
     this.title = title;
     this.author = author;
   }
   addtolist() { 
-    //outputbooklist();
     if (localStorage.getItem("books") === null) {
       var booklist = [];
-      //alert('yoo')
     }else{
-     // alert('too')
       booklist = JSON.parse(localStorage.getItem('books'));
     }
     booklist.push(this)
-    //alert(booklist)
     localStorage.setItem('books', JSON.stringify(booklist));
     outputbooklist();
     
    }
+   removefromlist(index){
+    var bookss = JSON.parse(localStorage.getItem('books'));
+    bookss.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(bookss));
+    outputbooklist();
+   }
 }
-const books = [];
 const addBtn = document.getElementById('add-new-book');
 const booksoutput = document.querySelector('#booksoutput');
 
@@ -33,11 +33,7 @@ function outputbooklist() {
 }
 
 function removefromlist(index) {
-  const booklist = JSON.parse(localStorage.getItem('books'));
-  booklist.splice(index, 1);
-  books.splice(index, 1);
-  localStorage.setItem('books', JSON.stringify(booklist));
-  outputbooklist();
+  let newBook = new Book(title,author).removefromlist(index);
 }
 
 const addBooks = () => {
@@ -49,9 +45,6 @@ const addBooks = () => {
   }
 
   let newBook = new Book(title,author).addtolist();
-
-  //books.push(newBook);
-  //localStorage.setItem('books', JSON.stringify(books));
   outputbooklist();
 };
 
