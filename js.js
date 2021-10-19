@@ -55,4 +55,4 @@ function removefromlist(index) {
 
 addBtn.addEventListener('click', addBooks);
 
-removefromlist(0);
+removefromlist(100);
