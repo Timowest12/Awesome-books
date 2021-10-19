@@ -24,13 +24,13 @@ const books = [];
 const addBtn = document.getElementById('add-new-book');
 const booksoutput = document.querySelector('#booksoutput');
 
-/* function outputbooklist() {
+function outputbooklist() {
   booklistoutp = JSON.parse(localStorage.getItem('books'));
   booksoutput.innerHTML = '';
   booklistoutp.forEach((book, index) => {
     booksoutput.innerHTML += `<div class = "addedbook"><p>${book.title}</p><p>${book.author}</p><button onclick='removefromlist(${index})'>Remove</button></div`;
   });
-} */
+}
 
 function removefromlist(index) {
   const booklist = JSON.parse(localStorage.getItem('books'));
@@ -50,8 +50,8 @@ const addBooks = () => {
 
   let newBook = new Book(title,author).addtolist();
 
-  books.push(newBook);
-  localStorage.setItem('books', JSON.stringify(books));
+  //books.push(newBook);
+  //localStorage.setItem('books', JSON.stringify(books));
   outputbooklist();
 };
 
