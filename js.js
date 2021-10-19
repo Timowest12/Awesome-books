@@ -1,39 +1,39 @@
-class Book {
-  constructor(title, author) {
-    this.title = title;
-    this.author = author;
-  }
-  addtolist() { 
-    if (localStorage.getItem("books") === null) {
-      var booklist = [];
-    }else{
-      booklist = JSON.parse(localStorage.getItem('books'));
-    }
-    booklist.push(this)
-    localStorage.setItem('books', JSON.stringify(booklist));
-    outputbooklist();
-    
-   }
-   removefromlist(index){
-    var bookss = JSON.parse(localStorage.getItem('books'));
-    bookss.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(bookss));
-    outputbooklist();
-   }
-}
 const addBtn = document.getElementById('add-new-book');
+const bttnn = document.getElementById('addbuttom');
 const booksoutput = document.querySelector('#booksoutput');
 
 function outputbooklist() {
-  booklistoutp = JSON.parse(localStorage.getItem('books'));
+  const booklistoutp = JSON.parse(localStorage.getItem('books'));
   booksoutput.innerHTML = '';
   booklistoutp.forEach((book, index) => {
     booksoutput.innerHTML += `<div class = "addedbook"><p>${book.title}</p><p>${book.author}</p><button onclick='removefromlist(${index})'>Remove</button></div`;
   });
 }
 
-function removefromlist(index) {
-  let newBook = new Book(title,author).removefromlist(index);
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+
+  addtolist() {
+    let booklist = [];
+    if (localStorage.getItem('books') === null) {
+      booklist = [];
+    } else {
+      booklist = JSON.parse(localStorage.getItem('books'));
+    }
+    booklist.push(this);
+    localStorage.setItem('books', JSON.stringify(booklist));
+    outputbooklist();
+  }
+
+  removefromlist(index) {
+    const bookss = JSON.parse(localStorage.getItem('books'));
+    bookss.splice(index, 1);
+    localStorage.setItem('books', JSON.stringify(bookss));
+    outputbooklist(this);
+  }
 }
 
 const addBooks = () => {
@@ -44,9 +44,15 @@ const addBooks = () => {
     return;
   }
 
-  let newBook = new Book(title,author).addtolist();
+  const newBook = new Book(title, author).addtolist();
+  bttnn.addEventListener('click', newBook);
   outputbooklist();
 };
+function removefromlist(index) {
+  const newBook = new Book().removefromlist(index);
+  bttnn.addEventListener('click', newBook);
+}
 
 addBtn.addEventListener('click', addBooks);
+
 removefromlist(0);
