@@ -6,7 +6,7 @@ function outputbooklist() {
   const booklistoutp = JSON.parse(localStorage.getItem('books'));
   booksoutput.innerHTML = '';
   booklistoutp.forEach((book, index) => {
-    booksoutput.innerHTML += `<div class = "addedbook"><p>${book.title}</p><p>${book.author}</p><button onclick='removefromlist(${index})'>Remove</button></div`;
+    booksoutput.innerHTML += `<div class = "addedbook"><div class='innerdata'><p>'${book.title}'&nbsp;by:&nbsp;</p><p>${book.author}</p></div><button onclick='removefromlist(${index})'>Remove</button></div`;
   });
 }
 

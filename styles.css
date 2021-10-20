@@ -1,4 +1,12 @@
 
+* {
+  font-family: 'Atma', sans-serif;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
 .addbooks {
   display: flex;
   flex-direction: column;
@@ -13,20 +21,38 @@
 }
 
 .container {
-  width: 300px;
-  padding: 20px;
-  background-color: gainsboro;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line {
+  border: 1px solid black;
+  width: 100px;
+  margin-top: 20px;
 }
 
 .booksoutput {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.addedbook > * {
+  margin: 1px;
+}
+
+.booksoutput > *:nth-child(odd) {
+  background-color: #ddd;
 }
 
 input {
-  border: 1px solid gray;
+  border: 2px solid black;
   padding: 5px;
+  margin: 5px 0;
 }
 
 textarea:focus,
@@ -34,12 +60,22 @@ input:focus {
   outline: none;
 }
 
+.controls {
+  display: flex;
+  justify-content: flex-end;
+}
+
 button {
-  padding: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 15px;
   cursor: pointer;
-  background: black;
-  border: 1px solid black;
-  color: white;
+  background: rgb(245, 242, 242);
+  border: 3px solid black;
+  color: rgb(26, 25, 25);
+}
+
+.innerdata {
+  display: flex;
 }
 
 button:hover {
@@ -49,7 +85,11 @@ button:hover {
 }
 
 .addedbook {
-  margin-bottom: 15px;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 p {
