@@ -12,10 +12,23 @@ const contactdiv = document.querySelector('.contactsection');
 function list(){
   contactdiv.classList.add('notvisible');
   inputsectiondiv.classList.add('notvisible');
-  outputsectiondiv.classList.add('visible');
+  outputsectiondiv.classList.remove('notvisible');
+}
+list()
+function addneww(){
+  contactdiv.classList.add('notvisible');
+  inputsectiondiv.classList.remove('notvisible');
+  outputsectiondiv.classList.add('notvisible');
+}
+function contactt(){
+  contactdiv.classList.remove('notvisible');
+  inputsectiondiv.classList.add('notvisible');
+  outputsectiondiv.classList.add('notvisible');
 }
 
 listbtn.addEventListener('click', list);
+addnew.addEventListener('click', addneww);
+contact.addEventListener('click', contactt);
 
 function outputbooklist() {
   const booklistoutp = JSON.parse(localStorage.getItem('books'));
