@@ -11,9 +11,9 @@ const contactdiv = document.querySelector('.contactsection');
 
 const dateoutput = document.querySelector('.dateoutput');
 
-var DateTime = luxon.DateTime;
-this.localDatetime = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
-dateoutput.innerHTML = localDatetime;
+const { DateTime } = luxon;// eslint-disable-line
+this.localDatetime = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);// eslint-disable-line
+dateoutput.innerHTML = localDatetime;// eslint-disable-line
 
 function colorReset() {
   listbtn.style.color = 'black';
@@ -43,7 +43,6 @@ function contactt() {
   colorReset();
   this.style.color = 'blue';
 }
-
 
 listbtn.addEventListener('click', list);
 addnew.addEventListener('click', addneww);
@@ -103,5 +102,3 @@ function removefromlist(index) {
 addBtn.addEventListener('click', addBooks);
 
 removefromlist(100);
-
-

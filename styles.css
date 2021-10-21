@@ -85,45 +85,55 @@ button:hover {
   width: 100%;
   box-sizing: border-box;
 }
-.outputsection{
+
+.outputsection {
   width: 100%;
 }
-.navwrapper, footer{
+
+.navwrapper,
+footer {
   display: flex;
   justify-content: space-between;
   border: 2px solid black;
   margin: 3px;
   padding: 3px;
 }
-.navwrapper ul{
+
+.navwrapper ul {
   display: flex;
   justify-content: space-evenly;
   width: 230px;
-  margin:0;
+  margin: 0;
 }
-.navwrapper  li{
+
+.navwrapper li {
   list-style-type: none;
   cursor: pointer;
 }
 
-.navwrapper  li:not(:last-child){
+.navwrapper li:not(:last-child) {
   border-right: 2px solid black;
   padding-right: 20px;
 }
-.dateoutput{
+
+.dateoutput {
   position: absolute;
   right: 10px;
 }
-.notvisible{
+
+.notvisible {
   display: none;
 }
-.visible{
+
+.visible {
   display: block;
 }
+
 p {
   margin: 5px 0 5px 0;
 }
-footer{
+
+footer {
   position: fixed;
   bottom: 0;
   left: 10px;
