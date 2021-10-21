@@ -9,21 +9,25 @@ const outputsectiondiv = document.querySelector('.outputsection');
 const inputsectiondiv = document.querySelector('.inputsection');
 const contactdiv = document.querySelector('.contactsection');
 
-function list(){
+function list() {
   contactdiv.classList.add('notvisible');
   inputsectiondiv.classList.add('notvisible');
   outputsectiondiv.classList.remove('notvisible');
 }
-list()
-function addneww(){
+list();
+function addneww() {
   contactdiv.classList.add('notvisible');
   inputsectiondiv.classList.remove('notvisible');
   outputsectiondiv.classList.add('notvisible');
+  this.style.color = 'blue';
 }
-function contactt(){
+function contactt() {
   contactdiv.classList.remove('notvisible');
   inputsectiondiv.classList.add('notvisible');
   outputsectiondiv.classList.add('notvisible');
+}
+function colorReset() {
+  
 }
 
 listbtn.addEventListener('click', list);

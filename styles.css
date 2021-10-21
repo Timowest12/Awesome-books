@@ -27,12 +27,6 @@ h1 {
   align-items: center;
 }
 
-.line {
-  border: 1px solid black;
-  width: 100px;
-  margin-top: 20px;
-}
-
 .booksoutput {
   display: flex;
   align-items: flex-start;
@@ -94,22 +88,29 @@ button:hover {
 .outputsection{
   width: 100%;
 }
-.navwrapper{
+.navwrapper, footer{
   display: flex;
   justify-content: space-between;
   border: 2px solid black;
   margin: 3px;
   padding: 3px;
 }
-ul{
+.navwrapper ul{
   display: flex;
   justify-content: space-evenly;
-  width: 300px;
+  width: 230px;
   margin:0;
 }
-ul > li{
+.navwrapper  li{
   list-style-type: none;
+  cursor: pointer;
 }
+
+.navwrapper  li:not(:last-child){
+  border-right: 2px solid black;
+  padding-right: 20px;
+}
+
 .notvisible{
   display: none;
 }
@@ -118,4 +119,10 @@ ul > li{
 }
 p {
   margin: 5px 0 5px 0;
+}
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
 }
