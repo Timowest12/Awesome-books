@@ -9,26 +9,41 @@ const outputsectiondiv = document.querySelector('.outputsection');
 const inputsectiondiv = document.querySelector('.inputsection');
 const contactdiv = document.querySelector('.contactsection');
 
+const dateoutput = document.querySelector('.dateoutput');
+
+var DateTime = luxon.DateTime;
+this.localDatetime = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
+dateoutput.innerHTML = localDatetime;
+
+function colorReset() {
+  listbtn.style.color = 'black';
+  addnew.style.color = 'black';
+  contact.style.color = 'black';
+}
+
 function list() {
   contactdiv.classList.add('notvisible');
   inputsectiondiv.classList.add('notvisible');
   outputsectiondiv.classList.remove('notvisible');
+  colorReset();
+  listbtn.style.color = 'blue';
 }
 list();
 function addneww() {
   contactdiv.classList.add('notvisible');
   inputsectiondiv.classList.remove('notvisible');
   outputsectiondiv.classList.add('notvisible');
+  colorReset();
   this.style.color = 'blue';
 }
 function contactt() {
   contactdiv.classList.remove('notvisible');
   inputsectiondiv.classList.add('notvisible');
   outputsectiondiv.classList.add('notvisible');
+  colorReset();
+  this.style.color = 'blue';
 }
-function colorReset() {
-  
-}
+
 
 listbtn.addEventListener('click', list);
 addnew.addEventListener('click', addneww);
@@ -88,3 +103,5 @@ function removefromlist(index) {
 addBtn.addEventListener('click', addBooks);
 
 removefromlist(100);
+
+

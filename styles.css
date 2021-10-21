@@ -110,7 +110,10 @@ button:hover {
   border-right: 2px solid black;
   padding-right: 20px;
 }
-
+.dateoutput{
+  position: absolute;
+  right: 10px;
+}
 .notvisible{
   display: none;
 }
