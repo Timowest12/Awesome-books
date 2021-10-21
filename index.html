@@ -6,14 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="//fonts.googleapis.com/css?family=Atma&subset=latin" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles.css">
+    <script src="luxon.js"></script>
     <title>Awesome books</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="navwrapper">
+            <div>Awesome-Books</div>
+            <div><ul>
+                <li class="list"> List</li>
+                <li class="addnew">Add new</li>
+                <li class="contact">contact</li>
+            </ul></div>
+        </nav>
+    </header>
+    <span class="dateoutput">test</span>
     <section class="main">
         <div class="container">
+            <div class="outputsection">
             <h1>Awesome books</h1>
             <div class="booksoutput" id="booksoutput"></div>
-            <div class="line"></div>
+        </div>
+        <div class="inputsection">
             <h1>Add a new book</h1>
             <div class="addbooks">
                
@@ -25,7 +39,22 @@
                
             </div>
         </div>
+        <div class="contactsection">
+            <h1>Contact information</h1>
+            <p>Do you have any questions or you just want to say "Hello"?</p>
+            <ul>
+                <li>Our email</li>
+                <li>Our phone number: 111111111111</li>
+                <li>Our Address: Something street</li>
+            </ul>
+        </div>
+        </div>
+        <footer>
+            <p>Copywrite..</p>
+        </footer>
     </section>
+    
     <script src="js.js"></script>
+    
 </body>
 </html>

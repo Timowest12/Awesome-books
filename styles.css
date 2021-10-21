@@ -27,12 +27,6 @@ h1 {
   align-items: center;
 }
 
-.line {
-  border: 1px solid black;
-  width: 100px;
-  margin-top: 20px;
-}
-
 .booksoutput {
   display: flex;
   align-items: flex-start;
@@ -92,6 +86,56 @@ button:hover {
   box-sizing: border-box;
 }
 
+.outputsection {
+  width: 100%;
+}
+
+.navwrapper,
+footer {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin: 3px;
+  padding: 3px;
+}
+
+.navwrapper ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 230px;
+  margin: 0;
+}
+
+.navwrapper li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.navwrapper li:not(:last-child) {
+  border-right: 2px solid black;
+  padding-right: 20px;
+}
+
+.dateoutput {
+  position: absolute;
+  right: 10px;
+}
+
+.notvisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
 p {
   margin: 5px 0 5px 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
 }
