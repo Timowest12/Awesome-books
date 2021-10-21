@@ -1,6 +1,21 @@
 const addBtn = document.getElementById('add-new-book');
 const bttnn = document.getElementById('addbuttom');
 const booksoutput = document.querySelector('#booksoutput');
+const listbtn = document.querySelector('.list');
+const addnew = document.querySelector('.addnew');
+const contact = document.querySelector('.contact');
+
+const outputsectiondiv = document.querySelector('.outputsection');
+const inputsectiondiv = document.querySelector('.inputsection');
+const contactdiv = document.querySelector('.contactsection');
+
+function list(){
+  contactdiv.classList.add('notvisible');
+  inputsectiondiv.classList.add('notvisible');
+  outputsectiondiv.classList.add('visible');
+}
+
+listbtn.addEventListener('click', list);
 
 function outputbooklist() {
   const booklistoutp = JSON.parse(localStorage.getItem('books'));

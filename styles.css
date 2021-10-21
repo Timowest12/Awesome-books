@@ -91,7 +91,31 @@ button:hover {
   width: 100%;
   box-sizing: border-box;
 }
-
+.outputsection{
+  width: 100%;
+}
+.navwrapper{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  margin: 3px;
+  padding: 3px;
+}
+ul{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  margin:0;
+}
+ul > li{
+  list-style-type: none;
+}
+.notvisible{
+  display: none;
+}
+.visible{
+  display: block;
+}
 p {
   margin: 5px 0 5px 0;
 }
